@@ -206,7 +206,7 @@
             <div class="card-content grey lighten-4">
               This confirmation serves as an authorization that Swazi Mobile lmtd can debit my airtime with the <span id="confirmCost"></span> which is the total value of my cart.
               </br></br>
-              <a class="waves-effect red darken-1 btn" href="kfc_store.html" style="width: 100%">Go Back to Shop</a> </br></br> 
+              <a class="waves-effect red darken-1 btn" href="store.html" style="width: 100%">Go Back to Shop</a> </br></br> 
               <button class="waves-effect green darken-1 btn" style="width: 100%" data-target="modal1">Confirm</button>
               </br>
             </div>
@@ -220,7 +220,20 @@
               <p>Thank you for making your order with Licando, you will be notified when ready.</p>
             </div>
             <div class="modal-footer">
-              <a class="waves-effect red darken-1 btn" href="store.html" style="width: 100%">Go Back to Shop</a>
+              <a class="modal-action modal-close waves-effect red darken-1 btn" data-target="modalRating" style="width: 100%">Go Back to Shop</a>
+            </div>
+          </div>
+
+          <!-- Thank you modal -->
+          <div id="modalRating" class="modal">
+            <div class="modal-content">
+              <h4 class="modal-title">Rate Us</h4>
+              <hr>
+              <br>
+              <p id="ratings"><a><i id="star1" class="ion-ios-star-outline"></i>&nbsp;</a><a><i id="star2" class="ion-ios-star-outline"></i>&nbsp;</a><a><i id="star3" class="ion-ios-star-outline"></i>&nbsp;</a><a><i id="star4" class="ion-ios-star-outline"></i>&nbsp;</a><a><i id="star5"class="ion-ios-star-outline"></i></a></p>  
+            </div>
+            <div class="modal-footer">&nbsp;
+              <a class="modal-action modal-close waves-effect red darken-1 btn" href="store.html">Submit</a>&nbsp;&nbsp;<a class="modal-action modal-close btn btn-inverse" href="store.html" style="margin-right: 10px">Close</a>&nbsp;
             </div>
           </div>
         </div> <!-- End of Main Contents -->
@@ -239,11 +252,56 @@
       $(document).ready(function () {
           
         $("#nextToDelivery").click(function (e) {
-          alert('Ok');
           e.preventDefault();
 
           $("#custITab").removeClass("active");
           $("#delTab").addClass("active");
+        })
+
+        $("#star1").click(function (e) {
+          e.preventDefault();
+          $("#star1").css("color","orange");
+          $("#star2").css("color","");
+          $("#star3").css("color","");
+          $("#star4").css("color","");
+          $("#star5").css("color","");
+          
+        });
+
+        $("#star2").click(function (e) {
+          e.preventDefault();
+          $("#star1").css("color","orange");
+          $("#star2").css("color","orange");
+          $("#star3").css("color","");
+          $("#star4").css("color","");
+          $("#star5").css("color","");
+        });
+
+        $("#star3").click(function (e) {
+          e.preventDefault();
+          $("#star1").css("color","orange");
+          $("#star2").css("color","orange");
+          $("#star3").css("color","orange");
+          $("#star4").css("color","");
+          $("#star5").css("color","");
+        });
+
+        $("#star4").click(function (e) {
+          e.preventDefault();
+          $("#star1").css("color","orange");
+          $("#star2").css("color","orange");
+          $("#star3").css("color","orange");
+          $("#star4").css("color","orange");
+          $("#star5").css("color","");
+        })
+
+        $("#star5").click(function (e) {
+          e.preventDefault();
+          $("#star1").css("color","orange");
+          $("#star2").css("color","orange");
+          $("#star3").css("color","orange");
+          $("#star4").css("color","orange");
+          $("#star5").css("color","orange");
         })
 
         $('.modal').modal({
